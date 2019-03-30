@@ -1,0 +1,23 @@
+
+
+
+
+REM Tutorial: http://www.tenforums.com/tutorials/57567-services-restore-default-services-windows-10-a.html
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc" /V "DisplayName" /T "REG_SZ" /D "@%%SystemRoot%%\system32\dssvc.dll,-10003" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc" /V "ErrorControl" /T "REG_DWORD" /D "0x00000000" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc" /V "ImagePath" /T "REG_EXPAND_SZ" /D "%%SystemRoot%%\System32\svchost.exe -k LocalSystemNetworkRestricted" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc" /V "Start" /T "REG_DWORD" /D "0x00000003" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc" /V "Type" /T "REG_DWORD" /D "0x00000020" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc" /V "Description" /T "REG_SZ" /D "@%%SystemRoot%%\system32\dssvc.dll,-10002" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc" /V "ObjectName" /T "REG_SZ" /D "LocalSystem" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc" /V "ServiceSidType" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc" /V "RequiredPrivileges" /T "REG_MULTI_SZ" /D "SeImpersonatePrivilege\0SeCreateGlobalPrivilege\0" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc" /V "FailureActions" /T "REG_BINARY" /D "80510100000000000000000004000000140000000100000010270000010000001027000001000000102700000000000000000000" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc\Parameters" /V "ServiceDll" /T "REG_EXPAND_SZ" /D "%%SystemRoot%%\System32\DsSvc.dll" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc\Parameters" /V "ServiceDllUnloadOnStop" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc\Security" /V "Security" /T "REG_BINARY" /D "010004809C000000A800000000000000140000000200880006000000000014008D010200010100000000000504000000000014008D01020001010000000000050600000000001400FF010F0001010000000000051200000000001800FF010F000102000000000005200000002002000000001400140000000101000000000001000000000000180014000000010200000000000F0200000001000000010100000000000512000000010100000000000512000000" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc\TriggerInfo\0" /V "Type" /T "REG_DWORD" /D "0x00000006" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc\TriggerInfo\0" /V "Action" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc\TriggerInfo\0" /V "GUID" /T "REG_BINARY" /D "67D190BC70943941A9BABE0BBBF5B74D" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc\TriggerInfo\0" /V "Data0" /T "REG_BINARY" /D "420046003400440043003900310032002D0045003500320046002D0034003900300034002D0038004500420045002D003900330031003700430031004200440044003400390037000000" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\DsSvc\TriggerInfo\0" /V "DataType0" /T "REG_DWORD" /D "0x00000002" /F 1>NUL 2>&1

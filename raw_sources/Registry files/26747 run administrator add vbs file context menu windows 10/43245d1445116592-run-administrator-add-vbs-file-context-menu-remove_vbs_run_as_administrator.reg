@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; http://www.tenforums.com
+; Tutorial: http://www.tenforums.com/tutorials/26747-run-administrator-add-vbs-file-context-menu.html
+
+
+[-HKEY_CLASSES_ROOT\VBSFile\Shell\runas]
+
+

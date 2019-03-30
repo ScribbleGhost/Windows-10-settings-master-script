@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Jeff Farkas - BunnyJ(Citizen Z)...
+; http://www.tenforums.com
+
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\PowerShell]

@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: November 21st 2016
+; Tutorial: http://www.tenforums.com/tutorials/70503-windows-defender-scan-removable-drives-enable-windows-10-a.html
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Scan]
+"DisableRemovableDriveScanning"=dword:00000000

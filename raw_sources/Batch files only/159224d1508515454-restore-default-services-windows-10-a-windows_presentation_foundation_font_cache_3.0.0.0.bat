@@ -1,0 +1,16 @@
+
+
+
+
+REM Tutorial: https://www.tenforums.com/tutorials/57567-restore-default-services-windows-10-a.html
+REG DELETE "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /V "DisplayName" /T "REG_SZ" /D "@%%SystemRoot%%\system32\PresentationHost.exe,-3309" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /V "ErrorControl" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /V "ImagePath" /T "REG_EXPAND_SZ" /D "%%systemroot%%\Microsoft.Net\Framework64\v3.0\WPF\PresentationFontCache.exe" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /V "Start" /T "REG_DWORD" /D "0x00000003" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /V "Type" /T "REG_DWORD" /D "0x00000010" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /V "Description" /T "REG_SZ" /D "@%%SystemRoot%%\system32\PresentationHost.exe,-3310" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /V "ObjectName" /T "REG_SZ" /D "NT Authority\LocalService" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /V "ServiceSidType" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /V "FailureActions" /T "REG_BINARY" /D "100E000000000000000000000300000014000000010000000000000000000000000000000000000000000000" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0\Security" /V "Security" /T "REG_BINARY" /D "01001480A0000000AC000000140000003000000002001C000100000002801400FF010F00010100000000000100000000020070000500000000001400FD01020001010000000000051200000000001800FF010F0001020000000000052000000020020000000014008D010200010100000000000504000000000014008D0102000101000000000005060000000000140010000000010100000000000504000000010100000000000512000000010100000000000512000000" /F 1>NUL 2>&1

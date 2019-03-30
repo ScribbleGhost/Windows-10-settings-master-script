@@ -1,0 +1,38 @@
+Windows Registry Editor Version 5.00
+
+; Created by:Shawn Brink
+; Created on: August 13th 2016
+; Tutorial: http://www.tenforums.com/tutorials/60125-open-bash-window-here-context-menu-add-windows-10-a.html
+
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Bash]
+@="Open Bash window here"
+"Extended"=-
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Bash\command]
+@="cmd.exe /c pushd \"%V\" && bash.exe"
+
+
+[HKEY_CLASSES_ROOT\Directory\shell\Bash]
+@="Open Bash window here"
+"Extended"=-
+
+[HKEY_CLASSES_ROOT\Directory\shell\Bash\command]
+@="cmd.exe /c pushd \"%V\" && bash.exe"
+
+
+[HKEY_CLASSES_ROOT\Drive\shell\Bash]
+@="Open Bash window here"
+"Extended"=-
+
+[HKEY_CLASSES_ROOT\Drive\shell\Bash\command]
+@="cmd.exe /c pushd \"%V\" && bash.exe"
+
+
+[HKEY_CLASSES_ROOT\LibraryFolder\Background\shell\Bash]
+@="Open Bash window here"
+"Extended"=-
+
+[HKEY_CLASSES_ROOT\LibraryFolder\Background\shell\Bash\command]
+@="cmd.exe /c pushd \"%V\" && bash.exe"

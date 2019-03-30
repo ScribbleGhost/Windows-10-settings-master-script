@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; http://www.tenforums.com
+; Tutorial: http://www.tenforums.com/tutorials/26754-run-administrator-add-msi-file-context-menu-windows-10-a.html
+
+
+[-HKEY_CLASSES_ROOT\Msi.Package\Shell\runas]
+
+

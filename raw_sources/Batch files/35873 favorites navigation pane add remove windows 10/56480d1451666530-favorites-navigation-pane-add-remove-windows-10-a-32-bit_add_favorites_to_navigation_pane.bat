@@ -1,0 +1,12 @@
+
+
+
+
+REM Tutorial: http://www.tenforums.com/tutorials/35873-favorites-navigation-pane-add-remove-windows-10-a.html
+REG ADD "HKCU\SOFTWARE\Classes\CLSID\{323CA680-C24D-4099-B94D-446DD2D7249E}" /V "" /D "Favorites" /F 1>NUL 2>&1
+REG ADD "HKCU\SOFTWARE\Classes\CLSID\{323CA680-C24D-4099-B94D-446DD2D7249E}" /V "FolderValueFlags" /T "REG_DWORD" /D "0x00000028" /F 1>NUL 2>&1
+REG ADD "HKCU\SOFTWARE\Classes\CLSID\{323CA680-C24D-4099-B94D-446DD2D7249E}" /V "SortOrderIndex" /T "REG_DWORD" /D "0x00000004" /F 1>NUL 2>&1
+REG ADD "HKCU\SOFTWARE\Classes\CLSID\{323CA680-C24D-4099-B94D-446DD2D7249E}" /V "System.IsPinnedToNameSpaceTree" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKCU\SOFTWARE\Classes\CLSID\{323CA680-C24D-4099-B94D-446DD2D7249E}\DefaultIcon" /V "" /D "%%SystemRoot%%\system32\imageres.dll,-185" /F 1>NUL 2>&1
+REG ADD "HKCU\SOFTWARE\Classes\CLSID\{323CA680-C24D-4099-B94D-446DD2D7249E}\ShellFolder" /V "Attributes" /T "REG_DWORD" /D "0x70010000" /F 1>NUL 2>&1
+REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /V "{323CA680-C24D-4099-B94D-446DD2D7249E}" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1

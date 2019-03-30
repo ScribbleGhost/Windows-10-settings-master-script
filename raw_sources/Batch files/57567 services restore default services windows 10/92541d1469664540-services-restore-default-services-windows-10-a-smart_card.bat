@@ -1,0 +1,37 @@
+
+
+
+
+REM Tutorial: http://www.tenforums.com/tutorials/57567-services-restore-default-services-windows-10-a.html
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr" /V "DisplayName" /T "REG_SZ" /D "@%%SystemRoot%%\System32\SCardSvr.dll,-1" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr" /V "ErrorControl" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr" /V "Group" /T "REG_SZ" /D "SmartCardGroup" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr" /V "ImagePath" /T "REG_EXPAND_SZ" /D "%%SystemRoot%%\system32\svchost.exe -k LocalServiceAndNoImpersonation" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr" /V "Start" /T "REG_DWORD" /D "0x00000004" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr" /V "Type" /T "REG_DWORD" /D "0x00000020" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr" /V "Description" /T "REG_SZ" /D "@%%SystemRoot%%\System32\SCardSvr.dll,-5" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr" /V "DependOnService" /T "REG_MULTI_SZ" /D "wudfsvc\0" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr" /V "ObjectName" /T "REG_SZ" /D "NT AUTHORITY\LocalService" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr" /V "ServiceSidType" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr" /V "RequiredPrivileges" /T "REG_MULTI_SZ" /D "SeCreateGlobalPrivilege\0SeChangeNotifyPrivilege\0" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr" /V "FailureActions" /T "REG_BINARY" /D "840300000000000000000000030000001400000001000000C0D4010001000000E09304000000000000000000" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\Parameters" /V "ServiceDll" /T "REG_EXPAND_SZ" /D "%%SystemRoot%%\System32\SCardSvr.dll" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\Parameters" /V "ServiceDllUnloadOnStop" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\Parameters" /V "ServiceMain" /T "REG_SZ" /D "CalaisMain" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\Security" /V "Security" /T "REG_BINARY" /D "0100148090000000A00000001400000034000000020020000100000002C0180000000C000102000000000005200000002002000002005C000400000000021400FF010F0001010000000000051200000000001800FF01020001020000000000052000000020020000000014008D010200010100000000000504000000000014008D0102000101000000000005060000000102000000000005200000002002000001020000000000052000000020020000" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\0" /V "Type" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\0" /V "Action" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\0" /V "GUID" /T "REG_BINARY" /D "3052DD508ABAD111BF5D0000F805F530" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\1" /V "Type" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\1" /V "Action" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\1" /V "GUID" /T "REG_BINARY" /D "61811D126D86244ABA589058940C0D47" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\2" /V "Type" /T "REG_DWORD" /D "0x00000006" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\2" /V "Action" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\2" /V "GUID" /T "REG_BINARY" /D "67D190BC70943941A9BABE0BBBF5B74D" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\2" /V "Data0" /T "REG_BINARY" /D "630036006200350032003300350061002D0065003400310033002D0034003800310064002D0039006100630038002D003300310036003800310062003100660061006100660035000000" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\2" /V "DataType0" /T "REG_DWORD" /D "0x00000002" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\3" /V "Type" /T "REG_DWORD" /D "0x00000006" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\3" /V "Action" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\3" /V "GUID" /T "REG_BINARY" /D "67D190BC70943941A9BABE0BBBF5B74D" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\3" /V "Data0" /T "REG_BINARY" /D "440030003900420044004500420035002D0036003100370031002D0034004100330034002D0042004600450032002D003000360046004100380032003600350032003500360038003A00460032004100440044003500360030002D0045004200380035002D0034003100370030002D0038003200410032002D004100340038004500370038003900360039003000430044000000" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\SCardSvr\TriggerInfo\3" /V "DataType0" /T "REG_DWORD" /D "0x00000002" /F 1>NUL 2>&1

@@ -1,0 +1,28 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: August 21st 2017
+; Tutorial: https://www.tenforums.com/tutorials/91909-add-windows-defender-antivirus-control-panel-windows-10-a.html
+
+
+[HKEY_CLASSES_ROOT\CLSID\{d54e8f06-2413-4dea-b6d3-6b579e55fa36}]
+@="Windows Defender Antivirus"
+"InfoTip"="@%ProgramFiles%\\Windows Defender\\MpAsDesc.dll,-240"
+"LocalizedString"=hex(2):40,00,25,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,\
+  46,00,69,00,6c,00,65,00,73,00,25,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,\
+  00,73,00,20,00,44,00,65,00,66,00,65,00,6e,00,64,00,65,00,72,00,5c,00,45,00,\
+  70,00,70,00,4d,00,61,00,6e,00,69,00,66,00,65,00,73,00,74,00,2e,00,64,00,6c,\
+  00,6c,00,2c,00,2d,00,31,00,30,00,30,00,30,00,00,00
+"System.ApplicationName"="Microsoft.WindowsDefender"
+"System.ControlPanel.Category"="5"
+"System.ControlPanel.EnableInSafeMode"="3"
+"System.Software.TasksFileUrl"="Internal"
+
+[HKEY_CLASSES_ROOT\CLSID\{d54e8f06-2413-4dea-b6d3-6b579e55fa36}\DefaultIcon]
+@="%ProgramFiles%\\Windows Defender\\EppManifest.dll,-100"
+
+[HKEY_CLASSES_ROOT\CLSID\{d54e8f06-2413-4dea-b6d3-6b579e55fa36}\Shell\Open\command]
+ @="C:\\Program Files\\Windows Defender\\MSASCui.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{d54e8f06-2413-4dea-b6d3-6b579e55fa36}]
+@="Windows Defender Antivirus"

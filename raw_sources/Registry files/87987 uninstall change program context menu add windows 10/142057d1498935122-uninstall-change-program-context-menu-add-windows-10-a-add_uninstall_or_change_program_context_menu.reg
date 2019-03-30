@@ -1,0 +1,27 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: July 1st 2017
+; Tutorial: https://www.tenforums.com/tutorials/87987-uninstall-change-program-context-menu-add-windows-10-a.html
+
+
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Uninstall]
+"Icon"="shell32.dll,-271"
+"MUIVerb"="Uninstall or Change a Program"
+"Position"="Bottom"
+"SubCommands"=""
+
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Uninstall\shell\001flyout]
+"MUIVerb"="from Control Panel"
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Uninstall\shell\001flyout\command]
+@="control /name Microsoft.ProgramsAndFeatures"
+
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Uninstall\shell\002flyout]
+"MUIVerb"="from Settings"
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Uninstall\shell\002flyout\command]
+@="explorer ms-settings:appsfeatures"

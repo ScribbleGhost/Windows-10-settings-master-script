@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: August 21st 2017
+; Tutorial: https://www.tenforums.com/tutorials/91909-add-windows-defender-antivirus-control-panel-windows-10-a.html
+
+
+[-HKEY_CLASSES_ROOT\CLSID\{d54e8f06-2413-4dea-b6d3-6b579e55fa36}]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{d54e8f06-2413-4dea-b6d3-6b579e55fa36}]

@@ -1,0 +1,28 @@
+
+
+
+
+REM Tutorial: https://www.tenforums.com/tutorials/57567-restore-default-services-windows-10-a.html
+REG DELETE "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\spectrum" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum" /V "DisplayName" /T "REG_SZ" /D "@%%systemroot%%\system32\spectrum.exe,-101" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum" /V "ErrorControl" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum" /V "ImagePath" /T "REG_EXPAND_SZ" /D "%%systemroot%%\system32\spectrum.exe" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum" /V "Start" /T "REG_DWORD" /D "0x00000003" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum" /V "Type" /T "REG_DWORD" /D "0x00000010" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum" /V "Description" /T "REG_SZ" /D "@%%systemroot%%\system32\spectrum.exe,-102" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum" /V "DependOnService" /T "REG_MULTI_SZ" /D "rpcss\0" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum" /V "ObjectName" /T "REG_SZ" /D "NT AUTHORITY\LocalService" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum" /V "ServiceSidType" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum" /V "FailureCommand" /T "REG_SZ" /D "\"C:\Windows\System32\Spectrum.exe\" -safemode" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum" /V "FailureActions" /T "REG_BINARY" /D "3C0000000000000001000000050000001400000001000000E803000001000000E803000001000000E803000001000000E803000003000000E8030000" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum\Security" /V "Security" /T "REG_BINARY" /D "01001480A0000000AC000000140000003000000002001C000100000002801400FF010F00010100000000000100000000020070000500000000001400FD01020001010000000000051200000000001800FF010F0001020000000000052000000020020000000014008D010200010100000000000504000000000014008D0102000101000000000005060000000000140014000000010100000000000513000000010100000000000512000000010100000000000512000000" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum\TriggerInfo\0" /V "Type" /T "REG_DWORD" /D "0x00000006" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum\TriggerInfo\0" /V "Action" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum\TriggerInfo\0" /V "GUID" /T "REG_BINARY" /D "67D190BC70943941A9BABE0BBBF5B74D" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum\TriggerInfo\0" /V "Data0" /T "REG_BINARY" /D "440033004300310042003600340042002D0043004400300035002D0034004600420032002D0042004200320043002D004200420036003100440038003000430031003200330045000000" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum\TriggerInfo\0" /V "DataType0" /T "REG_DWORD" /D "0x00000002" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum\TriggerInfo\1" /V "Type" /T "REG_DWORD" /D "0x00000006" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum\TriggerInfo\1" /V "Action" /T "REG_DWORD" /D "0x00000001" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum\TriggerInfo\1" /V "GUID" /T "REG_BINARY" /D "67D190BC70943941A9BABE0BBBF5B74D" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum\TriggerInfo\1" /V "Data0" /T "REG_BINARY" /D "450035004200390032003300370038002D0030004300360035002D0034003400320043002D0041003600360042002D004600390037003100340044003200440037004200300030000000" /F 1>NUL 2>&1
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\spectrum\TriggerInfo\1" /V "DataType0" /T "REG_DWORD" /D "0x00000002" /F 1>NUL 2>&1

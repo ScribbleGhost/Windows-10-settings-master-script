@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Jeff Farkas - BunnyJ(Citizen Z)...
+; http://www.tenforums.com
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\PowerShell]
+@="&PowerShell"
+"Icon"="powershell.exe"
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\PowerShell\command]
+@="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
